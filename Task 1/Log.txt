@@ -1,0 +1,12 @@
+$ git log
+commit 868b8fdc301387fe11cc9c7aef9e0dbd64ad0981 (HEAD -> master)
+Author: Valery Ratsko <akosayo@protonmail.com>
+Date:   Tue Feb 11 23:47:46 2020 +0300
+
+    Add Task 1/Status.txt
+
+commit 6e276d2fc05bcb40e01dde46dc6686f266edc783
+Author: Valery Ratsko <akosayo@protonmail.com>
+Date:   Tue Feb 11 23:34:49 2020 +0300
+
+    Add .gitignore
