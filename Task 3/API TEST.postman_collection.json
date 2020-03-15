@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "f8d8b88d-61f2-42ef-b32f-fd3f6696988f",
+		"name": "API TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Blockchain",
+			"item": [
+				{
+					"name": "Exchange",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://blockchain.info/tobtc?currency=RUB&value=1000",
+							"protocol": "https",
+							"host": [
+								"blockchain",
+								"info"
+							],
+							"path": [
+								"tobtc"
+							],
+							"query": [
+								{
+									"key": "currency",
+									"value": "RUB"
+								},
+								{
+									"key": "value",
+									"value": "1000"
+								}
+							]
+						},
+						"description": "https://www.blockchain.com/api/exchange_rates_api"
+					},
+					"response": []
+				},
+				{
+					"name": "Chart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.blockchain.info/charts/transactions-per-second?timespan=3days&rollingAverage=10hours&format=csv&sampled=true",
+							"protocol": "https",
+							"host": [
+								"api",
+								"blockchain",
+								"info"
+							],
+							"path": [
+								"charts",
+								"transactions-per-second"
+							],
+							"query": [
+								{
+									"key": "timespan",
+									"value": "3days"
+								},
+								{
+									"key": "rollingAverage",
+									"value": "10hours"
+								},
+								{
+									"key": "format",
+									"value": "csv"
+								},
+								{
+									"key": "sampled",
+									"value": "true"
+								}
+							]
+						},
+						"description": "www.blockchain.com/api/charts_api"
+					},
+					"response": []
+				},
+				{
+					"name": "Pools",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.blockchain.info/pools?timespan=10days",
+							"protocol": "https",
+							"host": [
+								"api",
+								"blockchain",
+								"info"
+							],
+							"path": [
+								"pools"
+							],
+							"query": [
+								{
+									"key": "timespan",
+									"value": "10days"
+								}
+							]
+						},
+						"description": "https://www.blockchain.com/api/charts_api"
+					},
+					"response": []
+				}
+			],
+			"description": "blockchain.com\n",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "441538d4-1f30-43c6-91a0-49006fe68def",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "30c3904c-afa2-40a2-8035-c348f981fb20",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "QRCode",
+			"item": [
+				{
+					"name": "Generate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.qrserver.com/v1/create-qr-code/?data=SomeText&size=256x256&ecc=H&color=0-0-255&bgcolor=FFFF00&margin=10",
+							"protocol": "http",
+							"host": [
+								"api",
+								"qrserver",
+								"com"
+							],
+							"path": [
+								"v1",
+								"create-qr-code",
+								""
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "SomeText"
+								},
+								{
+									"key": "size",
+									"value": "256x256"
+								},
+								{
+									"key": "ecc",
+									"value": "H"
+								},
+								{
+									"key": "color",
+									"value": "0-0-255"
+								},
+								{
+									"key": "bgcolor",
+									"value": "FFFF00"
+								},
+								{
+									"key": "margin",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read #1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.qrserver.com/v1/read-qr-code/?fileurl=https%3A%2F%2Fwww.talentsearchpeople.com%2Finc%2Fimages_blog%2Fc%25C3%25B3digo%2520QR%2520de%2520tsp.png",
+							"protocol": "https",
+							"host": [
+								"api",
+								"qrserver",
+								"com"
+							],
+							"path": [
+								"v1",
+								"read-qr-code",
+								""
+							],
+							"query": [
+								{
+									"key": "fileurl",
+									"value": "https%3A%2F%2Fwww.talentsearchpeople.com%2Finc%2Fimages_blog%2Fc%25C3%25B3digo%2520QR%2520de%2520tsp.png"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read #2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.qrserver.com/v1/read-qr-code/?fileurl=https%3A%2F%2Fwww.qrstuff.com%2Fimages%2Fsample.png&outputformat=xml",
+							"protocol": "https",
+							"host": [
+								"api",
+								"qrserver",
+								"com"
+							],
+							"path": [
+								"v1",
+								"read-qr-code",
+								""
+							],
+							"query": [
+								{
+									"key": "fileurl",
+									"value": "https%3A%2F%2Fwww.qrstuff.com%2Fimages%2Fsample.png"
+								},
+								{
+									"key": "outputformat",
+									"value": "xml"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "http://goqr.me",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Dogs",
+			"item": [
+				{
+					"name": "7 Random by breed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://dog.ceo/api/breed/collie/images/random/7"
+					},
+					"response": []
+				},
+				{
+					"name": "List all breeds and their sub-breeds",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://dog.ceo/api/breeds/list/all"
+					},
+					"response": []
+				},
+				{
+					"name": "List sub-breeds of some breed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://dog.ceo/api/breed/mastiff/list"
+					},
+					"response": []
+				}
+			],
+			"description": "https://dog.ceo/dog-api",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
