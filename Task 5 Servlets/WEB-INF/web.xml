@@ -1,0 +1,87 @@
+<web-app>
+
+    <servlet>
+        <servlet-name>Index</servlet-name>
+        <servlet-class>IndexServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Status</servlet-name>
+        <servlet-class>StatusServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Get</servlet-name>
+        <servlet-class>GetServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Page</servlet-name>
+        <servlet-class>PageServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Check</servlet-name>
+        <servlet-class>CheckServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Forward</servlet-name>
+        <servlet-class>ForwardServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Redirect</servlet-name>
+        <servlet-class>RedirectServlet</servlet-class>
+    </servlet>
+
+    <filter>
+        <filter-name>Logger</filter-name>
+        <filter-class>LoggerFilter</filter-class>
+    </filter>
+
+
+
+    <servlet-mapping>
+        <servlet-name>Status</servlet-name>
+        <url-pattern>/status</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Get</servlet-name>
+        <url-pattern>/get</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Page</servlet-name>
+        <url-pattern>/page</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Check</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Forward</servlet-name>
+        <url-pattern>/test1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Redirect</servlet-name>
+        <url-pattern>/test2</url-pattern>
+    </servlet-mapping>
+
+    <filter-mapping>
+        <filter-name>Logger</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Index</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
