@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src = "posts.js"></script>
+        <script src = "logic.js"></script>
+    </head>
+    <body>
+        <script>
+            "use strict";
+
+            console.log("Full Authors Array:\n", JSON.parse(JSON.stringify(authors)));
+            console.log("Full Posts Array:\n", JSON.parse(JSON.stringify(posts)));
+
+            var manager = new PostManager(posts);
+
+            console.log("Getting post with ID 13:\n", JSON.parse(JSON.stringify(manager.getPost(13))));
+            
+            
+            manager.addPost(new Post(21, 'New added post with ID 21.', new Date('2020-05-25T11:28:41'), authors[0], ['hashtag-add-1', 'hashtag-add-2'], [authors[2], authors[9]]));
+            console.log("Full Post Array after adding new post with ID 21:\n", JSON.parse(JSON.stringify(posts)));
+
+            
+            manager.editPost(15, {'text': 'This text was edited!', 'hashtags': ['hashtag-modified-1']});
+            console.log("Full Post Array after editing post with ID 15:\n", JSON.parse(JSON.stringify(posts)));
+            
+            manager.removePost(5);
+            console.log("Full Post Array after removing post with ID 5:\n", JSON.parse(JSON.stringify(posts)));
+
+            var page = manager.getPage(2, 15);
+            console.log("Getting 15 Posts from 2-nd in date increasing order without any filter:\n", JSON.parse(JSON.stringify(page)));
+
+            page = manager.getPage(0, 20, {'author': 'Author #3', 'startDate': new Date('2019-01-01T00:00:00'), 'endDate': new Date('2020-12-31T23:59:59')});
+            console.log("Getting all Posts, but from 2019-2020 and from Author #3:\n", JSON.parse(JSON.stringify(page)));
+        </script>
+        Добрый день! Весь вывод в [F12] - [Console]!
+    </body>
+</html>
