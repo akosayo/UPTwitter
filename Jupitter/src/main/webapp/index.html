@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+        <link rel = "stylesheet" type = "text/css" href="resources/css/styles.css">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <meta charset="utf-8"/>
+    </head>
+
+    <script>
+        var isExpanded = false;
+
+        function searchExpand() {
+            if (isExpanded === false) {
+                isExpanded = true;
+                document.getElementById("SEARCH_EXPAND_WRAPPER").style.display = "flex";
+                document.getElementById("SEARCH_EXPAND_BUTTON").innerHTML = "▲▲▲";
+            } else if (isExpanded === true) {
+                isExpanded = false;
+                document.getElementById("SEARCH_EXPAND_WRAPPER").style.display = "none";
+                document.getElementById("SEARCH_EXPAND_BUTTON").innerHTML = "▼▼▼";
+            }
+        }
+
+    </script>
+
+    <body>
+        <div class = "flex-wrapper"> 
+            <div class = "flex-central">
+                <div class = "header">
+                    <div class = "sign-text">Signed as <a href = "#top" class = "sign-hyper">Zitrasa</a></div>
+                    <div class = "search-wrapper">
+                        <input class = "search-input" placeholder = "Search by message" type = "text"/>
+                        <button class = "search-button"> Search </button>
+                    </div>
+                    <button class = "search-expand" onclick = "searchExpand()" id = "SEARCH_EXPAND_BUTTON">▼▼▼</button>
+                    <div class = "expanded-search" id = "SEARCH_EXPAND_WRAPPER">
+                        <input class = "expanded-input" placeholder = "Search by account" type = "text"/>
+                        <input class = "expanded-input" placeholder = "Search by name" type = "text"/>
+                        <input class = "expanded-input" placeholder = "Search by hashtags" type = "text"/>
+                    </div>
+                </div>
+                <div class = "profile-wrapper">
+                    <img class = "profile-image" src="https://cs8.pikabu.ru/post_img/2016/12/26/12/og_og_1482785662247568782.jpg" />
+                    <div class = "profile-info">
+                        <div class = "info-text">
+                            <div class = "info-account">Signed as Zitrasa</div>
+                            <div class = "info-name">Justinian</div>
+                        </div>
+                        <div class = "info-actions">
+                            <button class = "action-log">Log out</button>
+                            <button class = "action-post">Post</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "post-new">
+                    <textarea placeholder = "Что нового?" class = "post-new-edit"></textarea>
+                    <div class = "post-new-wrapper">
+                        <input class = "post-new-hash-input" placeholder = "Input Hastags" type = "text"/>
+                        <button class = "post-new-button">Post</button> 
+                    </div>
+                </div>
+
+                <div class = "post">
+                    <div class = "post-photoinfo">
+                        <img class = "post-photo" src="https://cs8.pikabu.ru/post_img/2016/12/26/12/og_og_1482785662247568782.jpg" />
+                        <div class = "post-info">
+                            <div class = "post-info-time">02.04.20 14:20AM</div>
+                            <div class = "post-info-account">Zitrasa</div>
+                            <div class = "post-info-name">Justinian</div>
+                        </div>
+                    </div>
+                    <div class = "post-text">
+                        Very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very long post!
+                    </div>
+                    <div class = "post-hashbuttons">
+                        <div class = "post-hash">
+                            #beautiful #beautiful #beautiful #beautiful #beautiful #beautiful #beautiful #beautiful #beautiful #beautiful #beautiful 
+                            <div class = "post-hash-dropdown">Here is many beautiful hashtags, and it's full list of hashtags.</div>
+                        </div>
+                        <button class = "post-delete">🗑</button>
+                        <button class = "post-edit">✏ </button>
+                        <button class = "post-like">4 ❤</button>
+                    </div>
+                </div>
+
+                <div class = "post">
+                    <div class = "post-photoinfo">
+                        <img class = "post-photo" src="https://i.insider.com/5b22bda45e48ec22008b46b5?width=1080&format=jpeg" />
+                        <div class = "post-info">
+                            <div class = "post-info-time">01.03.19 13:59AM</div>
+                            <div class = "post-info-account">NotMyAccount</div>
+                            <div class = "post-info-name">NotMyName</div>
+                        </div>
+                    </div>
+                    <div class = "post-text">
+                        Hello, it's me, MARIO!
+                    </div>
+                    <div class = "post-hashbuttons">
+                        <div class = "post-hash">
+                            #sunset #radost 
+                            <div class = "post-hash-dropdown">Here is many beautiful hashtags, and it's full list of hashtags.</div>
+                        </div>
+                        <button class = "post-delete" style = "display: none;">🗑</button>
+                        <button class = "post-edit" style = "display: none;">✏ </button>
+                        <button class = "post-like">13 ❤</button>
+                    </div>
+                </div>
+
+                <div class = "post">
+                    <div class = "post-photoinfo">
+                        <img class = "post-photo" src="https://docplayer.ru/docs-images/100/148085081/images/8-6.jpg" />
+                        <div class = "post-info">
+                            <div class = "post-info-time">05.12.19 15:04PM</div>
+                            <div class = "post-info-account">ihatemyself</div>
+                            <div class = "post-info-name">SomeCat</div>
+                        </div>
+                    </div>
+                    <div class = "post-text">
+                        Another great post!
+                    </div>
+                    <div class = "post-hashbuttons">
+                        <div class = "post-hash">
+                            #wellthatsall
+                            <div class = "post-hash-dropdown">Here is many beautiful hashtags, and it's full list of hashtags.</div>
+                        </div>
+                        <button class = "post-delete" style = "display: none;">🗑</button>
+                        <button class = "post-edit" style = "display: none;">✏ </button>
+                        <button class = "post-like">4 ❤</button>
+                    </div>
+                </div>
+
+                <div class = "post">
+                    <div class = "post-photoinfo">
+                        <img class = "post-photo" src="https://i.ytimg.com/vi/_2k3Xsw-svA/maxresdefault.jpg" />
+                        <div class = "post-info">
+                            <div class = "post-info-time">14:04.18 00:01AM</div>
+                            <div class = "post-info-account">theRealWalterTheDog</div>
+                            <div class = "post-info-name">Walter</div>
+                        </div>
+                    </div>
+                    <div class = "post-text">
+                        I like pancakes!
+                    </div>
+                    <div class = "post-hashbuttons">
+                        <div class = "post-hash">
+                            #мненадоелоэтимзаниматься #безрофлов 
+                            <div class = "post-hash-dropdown">Here is many beautiful hashtags, and it's full list of hashtags.</div>
+                        </div>
+                        <button class = "post-delete" style = "display: none;">🗑</button>
+                        <button class = "post-edit" style = "display: none;">✏ </button>
+                        <button class = "post-like">8 ❤</button>
+                    </div>
+                </div>
+
+                <div class = "post">
+                    <div class = "post-photoinfo">
+                        <img class = "post-photo" src="https://images-na.ssl-images-amazon.com/images/I/71ar35igrrL.png" />
+                        <div class = "post-info">
+                            <div class = "post-info-time">30.01.20 14:20PM</div>
+                            <div class = "post-info-account">wowAccountWow</div>
+                            <div class = "post-info-name">Doge</div>
+                        </div>
+                    </div>
+                    <div class = "post-text">
+                        Golosuiu za grudinina!
+                    </div>
+                    <div class = "post-hashbuttons">
+                        <div class = "post-hash">
+                            #kandidatOtNaroda
+                            <div class = "post-hash-dropdown">Here is many beautiful hashtags, and it's full list of hashtags.</div>
+                        </div>
+                        <button class = "post-delete" style = "display: none;">🗑</button>
+                        <button class = "post-edit" style = "display: none;">✏ </button>
+                        <button class = "post-like">25 ❤</button>
+                    </div>
+                </div>
+
+                <div class = "post">
+                    <div class = "post-photoinfo">
+                        <img class = "post-photo" src="https://upload.wikimedia.org/wikipedia/ru/thumb/9/98/%D0%93-%D0%9C-%D0%A4%D0%B8%D1%85%D1%82%D0%B5%D0%BD%D0%B3%D0%BE%D0%BB%D1%8C%D1%86.jpg/274px-%D0%93-%D0%9C-%D0%A4%D0%B8%D1%85%D1%82%D0%B5%D0%BD%D0%B3%D0%BE%D0%BB%D1%8C%D1%86.jpg" />
+                        <div class = "post-info">
+                            <div class = "post-info-time">15.01.20 23:04PM</div>
+                            <div class = "post-info-account">realFrontender</div>
+                            <div class = "post-info-name">NotAMatematician</div>
+                        </div>
+                    </div>
+                    <div class = "post-text">
+                        Obojau versku.
+                    </div>
+                    <div class = "post-hashbuttons">
+                        <div class = "post-hash">
+                            #kastrizaLuchshiy #htmlДляБогов
+                            <div class = "post-hash-dropdown">Here is many beautiful hashtags, and it's full list of hashtags.</div>
+                        </div>
+                        <button class = "post-delete" style = "display: none;">🗑</button>
+                        <button class = "post-edit" style = "display: none;">✏ </button>
+                        <button class = "post-like">2 ❤</button>
+                    </div>
+                </div>
+
+                <div class = "post">
+                    <div class = "post-photoinfo">
+                        <img class = "post-photo" src="https://lh3.googleusercontent.com/proxy/FiG_chesrayHMxc5-eH1rv6803qJvQ1V0GZbRkdLO54Fan3hcMbvCr-1Uxmq5089fOHmdDphu4fOtA0H4uSYugqUECeNxhxQ2AtPcfqmvuauutJEMlHoDvRES9WNooUb8rln8KvrbJ-mKUopjXt9SCbl28N4XSX4rA" />
+                        <div class = "post-info">
+                            <div class = "post-info-time">04.03.20 15:00PM</div>
+                            <div class = "post-info-account">PROSTOKREVETRKA</div>
+                            <div class = "post-info-name">Krevetka</div>
+                        </div>
+                    </div>
+                    <div class = "post-text">
+                        А я вообще креветка! Ну вот ответь себе для начала, чего ты от меня ждал? Глубомысленных цитат как в инсте под фоточками заката? АЛЕ! Ты читаешь пост членистоногого!
+                    </div>
+                    <div class = "post-hashbuttons">
+                        <div class = "post-hash">
+                            #философия
+                            <div class = "post-hash-dropdown">Here is many beautiful hashtags, and it's full list of hashtags.</div>
+                        </div>
+                        <button class = "post-delete" style = "display: none;">🗑</button>
+                        <button class = "post-edit" style = "display: none;">✏ </button>
+                        <button class = "post-like">0 ❤</button>
+                    </div>
+                </div>
+
+                <div class = "load-more-wrapper">
+                    <button class = "load-more">Загрузить больше постов</button>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <div class = "footer-item"> Ротько Валерий </div>
+            <div class = "footer-item"> ФПМИ, 2 Курс, 8 Группа </div>
+            <div class = "footer-item"> zitrasa@yandex.ru </div>
+        </footer>
+    </body>
+</html> 
