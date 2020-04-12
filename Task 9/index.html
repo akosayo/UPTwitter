@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+        <link rel = "stylesheet" type = "text/css" href="resources/css/styles.css">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <meta charset="utf-8"/>
+        <script src = "resources/js/posts.js"></script>
+        <script src = "resources/js/postmanager.js"></script>
+        <script src = "resources/js/inspector.js"></script>
+    </head>
+
+    <script>
+        var isExpanded = false;
+
+        function searchExpand() {
+            if (isExpanded === false) {
+                isExpanded = true;
+                document.getElementById("SEARCH_EXPAND_WRAPPER").style.display = "flex";
+                document.getElementById("SEARCH_EXPAND_BUTTON").innerHTML = "▲▲▲";
+            } else if (isExpanded === true) {
+                isExpanded = false;
+                document.getElementById("SEARCH_EXPAND_WRAPPER").style.display = "none";
+                document.getElementById("SEARCH_EXPAND_BUTTON").innerHTML = "▼▼▼";
+            }
+        }
+
+    </script>
+
+    <body>
+        <div class = "flex-wrapper"> 
+            <div class = "flex-central">
+                <div class = "header">
+                    <div class = "sign-text", id = "SIGN-TEXT" style = "display: none;">Signed as <a href = "#top" class = "sign-hyper" id = "SIGN-TEXT-NAME">Justinian</a></div>
+                    <button class = "sign-upper-button" id = "SIGN-UPPER-BUTTON">Log in</button>
+                    <div class = "search-wrapper">
+                        <input class = "search-input" placeholder = "Search by name" type = "text"/>
+                        <button class = "search-button"> Search </button>
+                    </div>
+                    <button class = "search-expand" onclick = "searchExpand()" id = "SEARCH_EXPAND_BUTTON">▼▼▼</button>
+                    <div class = "expanded-search" id = "SEARCH_EXPAND_WRAPPER">
+                        <input class = "expanded-input" placeholder = "Search by hashtags" type = "text"/>
+                    </div>
+                </div>
+                <div class = "profile-wrapper" id = "PROFILE-WRAPPER" style="display: none;">
+                    <img class = "profile-image" id = "PROFILE-PICTURE" src="https://cs8.pikabu.ru/post_img/2016/12/26/12/og_og_1482785662247568782.jpg" />
+                    <div class = "profile-info">
+                        <div class = "info-text">
+                            <div class = "info-name" id = "PROFILE-NAME">Justinian</div>
+                        </div>
+                        <div class = "info-actions">
+                            <button class = "action-log">Log out</button>
+                            <button class = "action-post">Post</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "post-new" id = "NEW-POST-WRAPPER" style = "display: none;">
+                    <textarea placeholder = "Что нового?" class = "post-new-edit"></textarea>
+                    <div class = "post-new-wrapper">
+                        <input class = "post-new-hash-input" placeholder = "Input Hastags" type = "text"/>
+                        <button class = "post-new-button">Post</button> 
+                    </div>
+                </div>
+
+                <div class = "posts-empty" id = "POSTS">
+                </div>
+
+                <div class = "load-more-wrapper">
+                    <button class = "load-more">Загрузить больше постов</button>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <div class = "footer-item"> Ротько Валерий </div>
+            <div class = "footer-item"> ФПМИ, 2 Курс, 8 Группа </div>
+            <div class = "footer-item"> zitrasa@yandex.ru </div>
+        </footer>
+    </body>
+</html> 
