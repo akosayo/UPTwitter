@@ -8,7 +8,7 @@ class Author {
         this.photoLink = photoLink;
     }
 
-    static _validate(author) {
+    static validate(author) {
         return (author.id >= 0 && author.name.length > 0);
     }
 }
@@ -25,11 +25,11 @@ class Post {
         this.likes = likes;
     }
 
-    static _validate(post) {
+    static validate(post) {
         return (post.id >= 0 && 
             post.text.length <= 200 &&
-            Author._validate(post.author) &&
-            post.likes.every(author => Author._validate(author))
+            Author.validate(post.author) &&
+            post.likes.every(author => Author.validate(author))
         );
     }
 }
