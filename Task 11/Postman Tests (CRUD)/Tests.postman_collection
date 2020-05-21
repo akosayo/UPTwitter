@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "23122dd7-c4ff-4581-8b0f-880405f104ff",
+		"name": "Jupiter V0.8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Batch Load",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Jupiter/batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Jupiter",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"post\":{\"date\":\"2018-05-05 23:04:15\",\"hashtags\":\"hash-none-2\",\"author\":{\"name\":\"TEMPO\",\"photo\":\"TEMPOLINK\",\"id\":5},\"id\":1,\"text\":\"POST TEXT TEMPO\",\"likes\":4},\n\t\"user\":{\"name\":\"TEMPO\",\"photo\":\"TEMPOLINK\",\"id\":5}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Jupiter/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Jupiter",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"post\":{\"date\":\"2018-05-05 23:04:15\",\"hashtags\":\"hash-shiny-1 hash-edited-shiny-2\",\"author\":{\"name\":\"TEMPO\",\"photo\":\"TEMPOLINK\",\"id\":9},\"id\":29,\"text\":\"shiny edited new post\",\"likes\":4},\n\t\"method\":\"update\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Jupiter/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Jupiter",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"post\":{\"date\":\"2018-05-05 23:04:15\",\"hashtags\":\"hash-shiny-1 hash-shiny-2\",\"author\":{\"name\":\"TEMPO\",\"photo\":\"TEMPOLINK\",\"id\":9},\"id\":1,\"text\":\"shiny new post\",\"likes\":4},\n\t\"method\":\"create\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Jupiter/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Jupiter",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"post\":{\"date\":\"2018-05-05 23:04:15\",\"hashtags\":\"hash-shiny-1 hash-shiny-2\",\"author\":{\"name\":\"TEMPO\",\"photo\":\"TEMPOLINK\",\"id\":9},\"id\":30,\"text\":\"shiny new post\",\"likes\":4},\n\t\"method\":\"delete\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Jupiter/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Jupiter",
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

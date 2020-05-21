@@ -1,0 +1,1 @@
+SELECT * FROM main.posts WHERE USER_ID = 10;

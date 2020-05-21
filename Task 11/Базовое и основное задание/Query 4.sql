@@ -1,0 +1,1 @@
+SELECT DISTINCT USER_NAME FROM main.users;

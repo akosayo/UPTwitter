@@ -1,0 +1,1 @@
+SELECT DATEDIFF(CURDATE(), (MIN(POST_DATE))) AS 'Days gone' FROM main.posts;

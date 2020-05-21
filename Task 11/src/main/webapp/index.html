@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"> 
+        <link rel = "stylesheet" type = "text/css" href="resources/css/styles.css">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+        <div class = "flex-wrapper"> 
+            <div class = "flex-central">
+                <div class = "header">
+                    <div class = "sign-text", id = "SIGN-TEXT" style = "display: none;">Signed as <a href = "#top" class = "sign-hyper" id = "SIGN-TEXT-NAME">Justinian</a></div>
+                    <button class = "sign-upper-button" id = "SIGN-UPPER-BUTTON" onclick="document.getElementById('POP-UP-LOGIN').style.display = 'block'">Log in</button>
+                    <div id = "POP-UP-LOGIN" class = "modal">
+                        <form class = "modal-content" onsubmit = "login(); return false;">
+                          <div class="container">
+                            <label><b>Username</b></label>
+                            <input class = "login-input" type = "text" id = "LOGIN-INPUT" placeholder = "Enter Username" required>
+                      
+                            <label><b>Password</b></label>
+                            <input class = "login-input" type = "password" id = "LOGIN-PASSWORD" placeholder = "Enter Password" required>
+                              
+                            <button class = "login-button" type = "submit">Login</button>
+                          </div>
+                        </form>
+                    </div>
+                    <div class = "search-wrapper">
+                        <input class = "search-input" id = "SEARCH-NAME" placeholder = "Search by name" type = "text"/>
+                        <button class = "search-button" id = "FILTER-UPDATE"> Search </button>
+                    </div>
+                    <div class = "expanded-search">
+                        <input class = "expanded-input" id = "SEARCH-HASHTAGS" placeholder = "Search by hashtags" type = "text"/>
+                    </div>
+                </div>
+                <div class = "profile-wrapper" id = "PROFILE-WRAPPER" style="display: none;">
+                    <img class = "profile-image" id = "PROFILE-PICTURE"/>
+                    <div class = "profile-info">
+                        <div class = "info-text">
+                            <div class = "info-name" id = "PROFILE-NAME">Justinian</div>
+                        </div>
+                        <div class = "info-actions">
+                            <button class = "action-log" id = "PROFILE-OUT">Log out</button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "post-new" id = "NEW-POST-WRAPPER" style = "display: none;">
+                    <textarea placeholder = "Что нового?" class = "post-new-edit" id = "NEW-POST-TEXT"></textarea>
+                    <div class = "post-new-wrapper">
+                        <input class = "post-new-hash-input" id = "NEW-POST-HASHTAGS" placeholder = "Input Hastags" type = "text"/>
+                        <button class = "post-new-button" id = "POST-NEW-BUTTON">Post</button> 
+                    </div>
+                </div>
+
+                <div class = "post-wrapper-edit" id = "EDIT-POST-WRAPPER">
+                    <div class = "edit-container">
+                        <textarea placeholder = "Что нового?" class = "post-new-edit" id = "EDIT-POST-TEXT"></textarea>
+                        <div class = "post-new-wrapper">
+                            <input class = "post-new-hash-input" id = "EDIT-POST-HASHTAGS" placeholder = "Input Hastags" type = "text"/>
+                            <button class = "post-new-button" name = "edit-post-button">Post</button> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "posts-empty" id = "POSTS">
+                </div>
+
+                <div class = "load-more-wrapper">
+                    <button class = "load-more" id = "LOAD-MORE">Загрузить больше постов</button>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <div class = "footer-item"> Ротько Валерий </div>
+            <div class = "footer-item"> ФПМИ, 2 Курс, 8 Группа </div>
+            <div class = "footer-item"> zitrasa@yandex.ru </div>
+        </footer>
+
+        <script>
+            var popuplogin = document.getElementById('POP-UP-LOGIN'); 
+            var popupedit = document.getElementById('EDIT-POST-WRAPPER');
+
+            document.getElementById("PROFILE-OUT").addEventListener("click", function() {
+                manipulator.logout();
+            });
+
+            document.getElementById("POST-NEW-BUTTON").addEventListener("click", function() {
+                manipulator.newPost();
+            });
+
+            document.getElementById("FILTER-UPDATE").addEventListener("click", function() {
+                manipulator.updateFilter();
+            })
+
+            document.getElementById("LOAD-MORE").addEventListener("click", function() {
+                manipulator.loadMore();
+            })
+
+            document.getElementsByName("edit-post-button")[0].addEventListener("click", function() {
+                manipulator.editPost();
+            })
+
+            function login() {
+                manipulator.login();
+                popuplogin.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == popuplogin) {
+                    popuplogin.style.display = "none";
+                } else if (event.target == popupedit) {
+                    popupedit.style.display = "none";
+                }
+            }
+    
+        </script>
+    </body>
+    
+    <script src = "resources/js/posts.js"></script>
+    <script src = "resources/js/postmanager.js"></script>
+    <script src = "resources/js/inspector.js"></script>
+    <script src = "resources/js/manipulator.js"></script>
+    <script src = "resources/js/loader.js"></script>
+
+</html> 

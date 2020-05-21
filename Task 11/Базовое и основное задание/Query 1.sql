@@ -1,0 +1,1 @@
+SELECT * FROM main.posts ORDER BY POST_DATE DESC;
